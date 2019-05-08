@@ -1,0 +1,24 @@
+brew "git"
+brew "hub"
+brew "zsh"
+brew "zsh-completions"
+brew "fzf"
+brew "rbenv"
+brew "ruby-build"
+brew "tmux"
+brew "diff-so-fancy"
+
+tap "thoughtbot/formulae"
+brew "rcm"
+
+brew "mas"
+mas "Magnet", id: 441258766
+
+cask "vimr"
+cask "iTerm2"
+cask "google-chrome"
+cask "1Password"
+cask "gpg-suite"
+
+tap "homebrew/cask-fonts"
+cask "font-fira-code"

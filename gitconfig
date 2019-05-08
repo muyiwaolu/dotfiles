@@ -1,0 +1,13 @@
+[user]
+	name = Muyiwa Olu
+	email = muyiwaolu@users.noreply.github.com
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = ~/.gitignore
+	editor = vimr -n --wait --nvim
+[include]
+	path = ~/.gitconfig.local
+[push]
+	default = current
+[alias]
+	lg = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
