@@ -26,6 +26,11 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Use the silver searcher for FZF
+" essentially allows fuzzy searching
+" to respect .gitignore.
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
 " Fuzzy Searching
 nnoremap <C-p> :Files<CR>
 nnoremap <C-g> :GFiles<CR>
