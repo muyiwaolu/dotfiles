@@ -21,6 +21,9 @@ export VISUAL=$EDITOR
 # hub 
 eval "$(hub alias -s)"
 
+# use homebrew ctags
+alias ctgs="`brew --prefix`/bin/ctags"
+
 # Local config
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 

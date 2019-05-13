@@ -10,6 +10,16 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
+" Enable line numbers
+set number
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" ctags
+set tags=tags
+
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
