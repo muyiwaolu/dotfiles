@@ -3,6 +3,8 @@ export ZSH="/Users/muyiwa/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
+plugins=(gitfast zsh-completions)
+
 source $ZSH/oh-my-zsh.sh
 
 # FZF
