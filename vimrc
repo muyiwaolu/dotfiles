@@ -61,6 +61,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'jxnblk/vim-mdx-js'
   Plug 'tpope/vim-commentary'
+  Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " Colour scheme
@@ -70,3 +71,7 @@ colorscheme NeoSolarized
 
 " ALE global configuration
 let g:ale_fix_on_save = 1
+
+" NERDTree
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
