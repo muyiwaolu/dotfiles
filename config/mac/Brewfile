@@ -17,10 +17,10 @@ brew "rcm"
 
 brew "mas"
 mas "Magnet", id: 441258766
+mas "1Password", id: 1333542190
 
 cask "macvim"
 cask "google-chrome"
-cask "1Password"
 cask "gpg-suite"
 
 tap "homebrew/cask-fonts"
