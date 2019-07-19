@@ -3,13 +3,9 @@ brew "hub"
 brew "zsh"
 brew "zsh-completions"
 brew "the_silver_searcher"
-brew "readline"
-brew "rbenv"
-brew "ruby-build"
 brew "tmux"
 brew "diff-so-fancy"
 brew "ctags"
-brew "htop"
 brew "vim"
 
 tap "thoughtbot/formulae"
@@ -20,3 +16,5 @@ mas "Magnet", id: 441258766
 mas "1Password", id: 1333542190
 
 cask "gpg-suite"
+cask "macvim"
+cask "visual-studio-code"

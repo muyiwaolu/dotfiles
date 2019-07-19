@@ -1,0 +1,3 @@
+cask "adoptopenjdk"
+brew "clojure"
+brew "leiningen"

@@ -6,4 +6,10 @@ global-brew:
 
 local-brew:
 	@./scripts/local-brew.sh
+
+clojure-brew:
+	@brew bundle --file=Brewfile.clojure
+
+ruby-brew:
+	@brew bundle --file=Brewfile.ruby
 	
