@@ -1,2 +1,5 @@
-Brewfile.local
+# General
 *.swp
+
+# Personal Configuration
+Brewfile.local
