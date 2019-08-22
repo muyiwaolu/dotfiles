@@ -1,3 +1,4 @@
 cask "adoptopenjdk"
 brew "clojure"
 brew "leiningen"
+brew "jenv"
