@@ -13,6 +13,9 @@ set expandtab
 " Enable line numbers
 set number
 
+" Mouse scrolling works as expected in Tmux
+set mouse=a
+
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
