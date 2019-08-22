@@ -38,7 +38,9 @@ endif
 " Note: plug#end automatically executes `filetype plugin indent on` 
 " and `syntax enable`, so no need to declare them again.
 call plug#begin('~/.vim/plugged')
-  Plug 'joshdick/onedark.vim'
+  Plug 'jeffkreeftmeijer/vim-dim'
+
+  " General
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tpope/vim-surround'
   Plug 'w0rp/ale'
@@ -47,7 +49,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'tpope/vim-fugitive'
   Plug 'christoomey/vim-conflicted'
+
+  " Ruby
   Plug 'vim-ruby/vim-ruby'
+  Plug 'tpoe/vim-rails'
+
+  " Javascript
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
   Plug 'jxnblk/vim-mdx-js'
@@ -55,10 +62,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'slim-template/vim-slim'
   Plug 'hashivim/vim-terraform'
+  Plug 'tpope/vim-repeat'
+
+  " Clojure
+  Plug 'guns/vim-sexp'
+  Plug 'tpope/vim-salve'
+  Plug 'tpope/vim-sexp-mappings-for-regular-people'
+  Plug 'tpope/vim-projectionist'
+  Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-fireplace'
 call plug#end()
 
 " Colour scheme
-colorscheme onedark
+colorscheme dim
 
 " ALE global configuration
 let g:ale_fix_on_save = 1
@@ -66,6 +82,10 @@ let g:ale_fix_on_save = 1
 " NERDTree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>nf :NERDTreeFind<CR>
+
+" Vim Fireplace
+nnoremap <Leader>ef :%Eval<CR>
+nnoremap <Leader>el :'<,'>Eval<CR>
 
 " The Silver Searcher
 if executable('ag')
