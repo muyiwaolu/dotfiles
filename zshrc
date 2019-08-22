@@ -21,6 +21,10 @@ export PATH="/usr/local/bin:$PATH"
 # rbenv
 eval "$(/usr/local/bin/rbenv init -)"
 
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 # editor
 export EDITOR=$(which vim)
 export VISUAL=$EDITOR
