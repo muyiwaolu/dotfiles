@@ -1,0 +1,2 @@
+{:user {:plugins [[cider/cider-nrepl "0.21.1"]
+                  [lein-cljfmt "0.6.4"]]}}

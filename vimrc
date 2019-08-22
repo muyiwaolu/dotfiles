@@ -52,7 +52,7 @@ call plug#begin('~/.vim/plugged')
 
   " Ruby
   Plug 'vim-ruby/vim-ruby'
-  Plug 'tpoe/vim-rails'
+  Plug 'tpope/vim-rails'
 
   " Javascript
   Plug 'pangloss/vim-javascript'
@@ -71,6 +71,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-projectionist'
   Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-fireplace'
+  Plug 'venantius/vim-cljfmt'
 call plug#end()
 
 " Colour scheme
