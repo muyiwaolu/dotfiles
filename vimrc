@@ -13,6 +13,9 @@ set expandtab
 " Enable line numbers
 set number
 
+" Disable swap
+set noswapfile
+
 " Mouse scrolling works as expected in Tmux
 set mouse=a
 
