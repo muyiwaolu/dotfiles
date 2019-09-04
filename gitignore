@@ -3,3 +3,6 @@
 
 # Personal Configuration
 Brewfile.local
+
+# Clojure
+.eastwood
