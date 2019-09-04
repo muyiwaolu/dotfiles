@@ -94,6 +94,11 @@ nnoremap <Leader>nf :NERDTreeFind<CR>
 " Vim Fireplace
 nnoremap <Leader>ef :%Eval<CR>
 nnoremap <Leader>el :'<,'>Eval<CR>
+nnoremap <Leader>rt :RunTests<CR>
+
+" Vim Cljfmt
+let g:clj_fmt_autosave = 0
+nnoremap <Leader>cf :Cljfmt<CR>
 
 " The Silver Searcher
 if executable('ag')
