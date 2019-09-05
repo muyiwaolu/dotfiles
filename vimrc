@@ -56,6 +56,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'christoomey/vim-conflicted'
+  Plug 'mhinz/vim-signify'
 
   " Ruby
   Plug 'vim-ruby/vim-ruby'
@@ -79,6 +80,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-fireplace'
   Plug 'venantius/vim-cljfmt'
+  Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
 
 " Colour scheme
@@ -86,6 +88,11 @@ colorscheme dim
 
 " ALE global configuration
 let g:ale_fix_on_save = 1
+
+" Vim signify colours
+highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
+highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
+highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
 
 " NERDTree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
