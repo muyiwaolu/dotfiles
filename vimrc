@@ -104,6 +104,11 @@ nnoremap <Leader>rt :RunTests<CR>
 let g:clj_fmt_autosave = 0
 nnoremap <Leader>cf :Cljfmt<CR>
 
+" Navigate the quickfix list
+nnoremap <Leader>qn :cn<CR>
+nnoremap <Leader>qp :cp<CR>
+
+
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
