@@ -44,7 +44,7 @@ endif
 " Note: plug#end automatically executes `filetype plugin indent on` 
 " and `syntax enable`, so no need to declare them again.
 call plug#begin('~/.vim/plugged')
-  Plug 'jeffkreeftmeijer/vim-dim'
+  Plug 'joshdick/onedark.vim'
 
   " General
   Plug 'ctrlpvim/ctrlp.vim'
@@ -82,9 +82,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'venantius/vim-cljfmt'
   Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
-
-" Colour scheme
-colorscheme dim
 
 " ALE global configuration
 let g:ale_fix_on_save = 1
