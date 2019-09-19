@@ -6,3 +6,4 @@ Brewfile.local
 
 # Clojure
 .eastwood
+.java-version
