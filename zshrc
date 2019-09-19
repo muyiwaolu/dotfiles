@@ -39,6 +39,9 @@ alias ctgs="`brew --prefix`/bin/ctags"
 # autocompletion
 autoload -U compinit && compinit
 
+# Use macvim as git editor
+export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
+
 # Local config
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
