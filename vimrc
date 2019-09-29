@@ -57,6 +57,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rhubarb'
   Plug 'christoomey/vim-conflicted'
   Plug 'mhinz/vim-signify'
+  Plug 'tpope/vim-projectionist'
+  Plug 'tpope/vim-dispatch'
 
   " Ruby
   Plug 'vim-ruby/vim-ruby'
@@ -73,14 +75,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
 
   " Clojure
+  Plug 'guns/vim-clojure-static'
   Plug 'guns/vim-sexp'
   Plug 'tpope/vim-salve'
   Plug 'tpope/vim-sexp-mappings-for-regular-people'
-  Plug 'tpope/vim-projectionist'
-  Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-fireplace'
   Plug 'venantius/vim-cljfmt'
-  Plug 'kien/rainbow_parentheses.vim'
+  Plug 'luochen1990/rainbow'
 call plug#end()
 
 " ALE global configuration
@@ -123,6 +124,18 @@ endif
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Ranibow parenthesis
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+      \  'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+      \  'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+      \  'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+      \  'separately': {
+      \      '*': 0,
+      \      'clojure': {},
+      \  }
+      \}
 
 " Define Ag function
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
