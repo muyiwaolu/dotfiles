@@ -7,3 +7,7 @@ Brewfile.local
 # Clojure
 .eastwood
 .java-version
+
+# IntelliJ
+.idea/
+*.iml
