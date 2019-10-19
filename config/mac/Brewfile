@@ -9,6 +9,7 @@ brew "reattach-to-user-namespace"
 brew "diff-so-fancy"
 brew "ctags"
 brew "vim"
+brew "node@10"
 
 tap "thoughtbot/formulae"
 brew "rcm"

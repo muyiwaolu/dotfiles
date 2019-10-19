@@ -7,6 +7,9 @@ global-brew:
 local-brew:
 	@./scripts/local-brew.sh
 
+install-yarn:
+	@./scripts/install-yarn.sh
+
 clojure-brew:
 	@brew bundle --file=Brewfile.clojure
 

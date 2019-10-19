@@ -25,6 +25,10 @@ eval "$(/usr/local/bin/rbenv init -)"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+# Node
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # editor
 export EDITOR="$(which vim)"
 export VISUAL=$EDITOR
@@ -41,4 +45,3 @@ autoload -U compinit && compinit
 
 # Local config
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
-
