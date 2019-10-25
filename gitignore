@@ -9,6 +9,9 @@ Brewfile.local
 .java-version
 *.lein-env
 
+# Ruby
+spec/examples.txt
+
 # IntelliJ
 .idea/
 *.iml
