@@ -43,5 +43,11 @@ alias ctgs="`brew --prefix`/bin/ctags"
 # autocompletion
 autoload -U compinit && compinit
 
+# aliases
+alias git="hub"
+alias st="git status"
+alias lg="git lg"
+alias fwl="git push origin --force-with-lease"
+
 # Local config
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
