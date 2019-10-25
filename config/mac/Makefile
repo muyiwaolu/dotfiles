@@ -15,4 +15,8 @@ clojure-brew:
 
 ruby-brew:
 	@brew bundle --file=Brewfile.ruby
+
+material-shell:
+	@./scripts/material-shell.sh
+
 	

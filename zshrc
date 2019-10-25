@@ -1,7 +1,7 @@
 # Oh my ZSH
 export ZSH="/Users/muyiwa/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="materialshell"
 
 plugins=(gitfast zsh-completions)
 
