@@ -1,5 +1,8 @@
-set guifont=SF\ Mono:h14
-colorscheme onedark
+set guifont=Fira\ Code:h14
+
+let g:material_theme_style = 'darker'
+colorscheme material
+
 
 "Disable bell
 autocmd! GUIEnter * set vb t_vb=
