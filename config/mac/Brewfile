@@ -9,7 +9,7 @@ brew "reattach-to-user-namespace"
 brew "diff-so-fancy"
 brew "ctags"
 brew "vim"
-brew "node@10"
+brew "node"
 
 tap "thoughtbot/formulae"
 brew "rcm"
@@ -19,6 +19,4 @@ mas "Magnet", id: 441258766
 mas "1Password", id: 1333542190
 
 cask "gpg-suite"
-cask "jetbrains-toolbox"
-cask "macvim"
 cask "visual-studio-code"
