@@ -12,12 +12,6 @@ export LDFLAGS="-L/usr/local/opt/readline/lib"
 export CPPFLAGS="-I/usr/local/opt/readline/include"
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 
-# pip exists in PATH
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
-
-# Homebrew binaries take precedence in path
-export PATH="/usr/local/bin:$PATH"
-
 # rbenv
 eval "$(/usr/local/bin/rbenv init -)"
 
@@ -48,6 +42,12 @@ alias git="hub"
 alias st="git status"
 alias lg="git lg"
 alias fwl="git push origin --force-with-lease"
+
+# Python deps take precedence
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# Homebrew sbin isn available in path
+export PATH="/usr/local/sbin:$PATH"
 
 # Local config
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
