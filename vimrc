@@ -45,6 +45,7 @@ endif
 " and `syntax enable`, so no need to declare them again.
 call plug#begin('~/.vim/plugged')
   Plug 'joshdick/onedark.vim'
+  Plug 'kaicataldo/material.vim'
 
   " General
   Plug 'ctrlpvim/ctrlp.vim'
@@ -82,6 +83,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fireplace'
   Plug 'venantius/vim-cljfmt'
   Plug 'luochen1990/rainbow'
+  Plug 'bhurlow/vim-parinfer'
 call plug#end()
 
 " ALE global configuration

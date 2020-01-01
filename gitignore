@@ -4,6 +4,9 @@
 # Personal Configuration
 Brewfile.local
 
+# macOS
+.DS_Store
+
 # Clojure
 .eastwood
 .java-version
