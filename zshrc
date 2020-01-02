@@ -17,7 +17,6 @@ eval "$(/usr/local/bin/rbenv init -)"
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
 
 # Node
 export PATH="/usr/local/opt/node@10/bin:$PATH"
