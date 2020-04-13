@@ -44,16 +44,11 @@ endif
 " Note: plug#end automatically executes `filetype plugin indent on` 
 " and `syntax enable`, so no need to declare them again.
 call plug#begin('~/.vim/plugged')
-  Plug 'joshdick/onedark.vim'
-  Plug 'kaicataldo/material.vim'
-
   " General
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tpope/vim-surround'
   Plug 'w0rp/ale'
   Plug 'AndrewRadev/splitjoin.vim'
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'christoomey/vim-conflicted'
