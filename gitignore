@@ -18,3 +18,4 @@ spec/examples.txt
 # IntelliJ
 .idea/
 *.iml
+.generators
