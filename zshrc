@@ -27,9 +27,6 @@ export EDITOR="$(which vim)"
 export VISUAL=$EDITOR
 export GIT_EDITOR=$EDITOR
 
-# hub 
-eval "$(hub alias -s)"
-
 # use homebrew ctags
 alias ctgs="`brew --prefix`/bin/ctags"
 
@@ -37,7 +34,6 @@ alias ctgs="`brew --prefix`/bin/ctags"
 autoload -U compinit && compinit
 
 # aliases
-alias git="hub"
 alias st="git status"
 alias lg="git lg"
 alias fwl="git push origin --force-with-lease"

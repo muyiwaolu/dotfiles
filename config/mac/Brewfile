@@ -1,6 +1,5 @@
 brew "git"
 brew "git-lfs"
-brew "hub"
 brew "zsh"
 brew "zsh-completions"
 brew "the_silver_searcher"
