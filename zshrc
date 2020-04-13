@@ -1,7 +1,7 @@
 # Oh my ZSH
 export ZSH="/Users/muyiwa/.oh-my-zsh"
 
-ZSH_THEME="avit"
+ZSH_THEME="robbyrussell"
 
 plugins=(gitfast zsh-completions)
 
@@ -34,14 +34,12 @@ alias ctgs="`brew --prefix`/bin/ctags"
 autoload -U compinit && compinit
 
 # aliases
-alias st="git status"
-alias lg="git lg"
-alias fwl="git push origin --force-with-lease"
+alias g="git"
 
 # Python deps take precedence
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-# Homebrew sbin isn available in path
+# Homebrew sbin is available in path
 export PATH="/usr/local/sbin:$PATH"
 
 # Link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded)
