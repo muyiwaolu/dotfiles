@@ -1,7 +1,7 @@
 # Oh my ZSH
 export ZSH="/Users/muyiwa/.oh-my-zsh"
 
-ZSH_THEME="materialshell"
+ZSH_THEME="avit"
 
 plugins=(gitfast zsh-completions)
 
@@ -47,6 +47,9 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Homebrew sbin isn available in path
 export PATH="/usr/local/sbin:$PATH"
+
+# Link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded)
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 # Local config
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
