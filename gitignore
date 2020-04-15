@@ -11,6 +11,7 @@ Brewfile.local
 .eastwood
 .java-version
 *.lein-env
+*.lein-failures
 
 # Ruby
 spec/examples.txt
