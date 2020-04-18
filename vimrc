@@ -56,6 +56,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-projectionist'
   Plug 'tpope/vim-dispatch'
 
+  " Colours
+  Plug 'owickstrom/vim-colors-paramount'
+  Plug 'fxn/vim-monochrome'
+  Plug 'muyiwaolu/auto-dark-mode.vim'
+
   " Ruby
   Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'

@@ -1,8 +1,5 @@
-set guifont=Fira\ Code:h14
+" MacVim font
+set guifont=SF\ Mono:h12
 
-let g:material_theme_style = 'darker'
-colorscheme material
-
-
-"Disable bell
+" Disable bell
 autocmd! GUIEnter * set vb t_vb=
