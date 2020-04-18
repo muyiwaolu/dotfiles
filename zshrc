@@ -45,5 +45,8 @@ export PATH="/usr/local/sbin:$PATH"
 # Link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded)
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
+# Silence noisy deprecation warnings
+export RUBYOPT='-W:no-deprecated'
+
 # Local config
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
