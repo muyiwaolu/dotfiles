@@ -47,7 +47,7 @@ call plug#begin('~/.vim/plugged')
   " General
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tpope/vim-surround'
-  Plug 'w0rp/ale'
+  Plug 'dense-analysis/ale'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
@@ -55,6 +55,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-projectionist'
   Plug 'tpope/vim-dispatch'
+  Plug 'janko/vim-test'
 
   " Colours
   Plug 'owickstrom/vim-colors-paramount'
@@ -93,6 +94,13 @@ let g:ale_fix_on_save = 1
 highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
 highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
 highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
+
+" Vim test
+nnoremap <silent> <Leader>tf :TestFile<CR>
+nnoremap <silent> <Leader>tn :TestNearest<CR>
+nnoremap <silent> <Leader>tl :TestLast<CR>
+nnoremap <silent> <Leader>ts :TestSuite<CR>
+nnoremap <silent> <Leader>tv :TestVisit<CR>
 
 " NERDTree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
