@@ -1,8 +1,8 @@
 " MacVim font
-set guifont=SF\ Mono:h12
+set guifont=SF\ Mono:h13
 
 " Disable bell
 autocmd! GUIEnter * set vb t_vb=
 
-" Run tests in terminal.app
+" vim-test in macVim uses terminal.app
 let test#strategy = "terminal"
