@@ -1,12 +1,3 @@
-# Oh my ZSH
-export ZSH="/Users/muyiwa/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
-plugins=(gitfast zsh-completions)
-
-source $ZSH/oh-my-zsh.sh
-
 # Allow compilers to find Readline
 export LDFLAGS="-L/usr/local/opt/readline/lib"
 export CPPFLAGS="-I/usr/local/opt/readline/include"
