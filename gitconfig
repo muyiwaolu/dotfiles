@@ -1,6 +1,7 @@
 [user]
 	name = Muyiwa Olu
 	email = muyiw@olu.email
+	signingkey = F194CF36F278A3116BFF4446ACC4A532CA672C27
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = ~/.gitignore
@@ -15,3 +16,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
