@@ -34,6 +34,7 @@ eval "$(/usr/local/bin/rbenv init -)"
 
 # Java
 export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 # Node
 export PATH="/usr/local/opt/node@10/bin:$PATH"
@@ -52,6 +53,10 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Homebrew: sbin is available in path
 export PATH="/usr/local/sbin:$PATH"
+
+# Autocompletion
+# https://stackoverflow.com/a/58517668/4165455
+autoload -Uz compinit && compinit
 
 # Machine local config
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"

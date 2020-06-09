@@ -60,7 +60,6 @@ call plug#begin('~/.vim/plugged')
   " Colours
   Plug 'owickstrom/vim-colors-paramount'
   Plug 'fxn/vim-monochrome'
-  Plug 'muyiwaolu/auto-dark-mode.vim'
 
   " Ruby
   Plug 'vim-ruby/vim-ruby'
