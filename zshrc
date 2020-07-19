@@ -3,7 +3,10 @@ export EDITOR="$(which vim)"
 export VISUAL=$EDITOR
 export GIT_EDITOR=$EDITOR
 
-# Prompt
+# Left prompt
+PROMPT='%~ (%?) (%T) > '
+
+# Right prompt
 # https://stackoverflow.com/a/1128583/4165455
 setopt prompt_subst
 autoload -Uz vcs_info
@@ -41,6 +44,7 @@ export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 # Useful aliases
 alias g="git"
+alias b="bundle"
 
 # Link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded)
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
