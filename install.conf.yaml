@@ -7,3 +7,9 @@
     ~/.gitconfig:
         path: gitconfig
         create: true
+    ~/.vimrc:
+        path: vimrc
+        create: true
+    ~/.vim:
+        path: vim
+        create: true
