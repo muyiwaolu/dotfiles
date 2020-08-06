@@ -1,9 +1,9 @@
 [submodule "dotbot"]
-	path = dotbot
+	path = shell/dotbot
 	url = https://github.com/anishathalye/dotbot
 [submodule "FiraCode"]
-	path = FiraCode
+	path = font/FiraCode
 	url = git@github.com:tonsky/FiraCode
 [submodule "ayu-iTerm"]
-	path = ayu-iTerm
+	path = theme/ayu-iTerm
 	url = git@github.com:hwyncho/ayu-iTerm.git

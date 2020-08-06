@@ -2,20 +2,20 @@
 
 - link:
     ~/.ssh/config:
-        path: ssh/config
+        path: shell/ssh/config
         create: true
     ~/.gitconfig:
-        path: gitconfig
+        path: shell/gitconfig
         create: true
     ~/.vimrc:
-        path: vimrc
+        path: shell/vimrc
         create: true
     ~/.vim:
-        path: vim
+        path: shell/vim
         create: true
     ~/.gitignore:
-        path: gitignore
+        path: shell/gitignore
         create: true
     ~/.zshrc:
-        path: zshrc
+        path: shell/zshrc
         create: true
