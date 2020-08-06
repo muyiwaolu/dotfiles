@@ -13,3 +13,6 @@
     ~/.vim:
         path: vim
         create: true
+    ~/.gitignore:
+        path: gitignore
+        create: true
