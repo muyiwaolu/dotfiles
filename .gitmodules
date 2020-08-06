@@ -4,3 +4,6 @@
 [submodule "FiraCode"]
 	path = FiraCode
 	url = git@github.com:tonsky/FiraCode
+[submodule "ayu-iTerm"]
+	path = ayu-iTerm
+	url = git@github.com:hwyncho/ayu-iTerm.git
