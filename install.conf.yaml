@@ -16,3 +16,6 @@
     ~/.gitignore:
         path: gitignore
         create: true
+    ~/.zshrc:
+        path: zshrc
+        create: true
