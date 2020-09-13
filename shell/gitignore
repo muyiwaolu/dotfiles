@@ -16,6 +16,9 @@ Brewfile.local
 # Ruby
 spec/examples.txt
 
+# Node JS
+node_modules/
+
 # Jekyll
 .jekyll-cache/
 
