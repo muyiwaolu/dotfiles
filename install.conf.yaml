@@ -10,9 +10,6 @@
     ~/.vimrc:
         path: shell/vimrc
         create: true
-    ~/.vim:
-        path: shell/vim
-        create: true
     ~/.gitignore:
         path: shell/gitignore
         create: true
