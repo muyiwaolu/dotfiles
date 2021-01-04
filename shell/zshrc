@@ -42,10 +42,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 # Ruby
 eval "$(/usr/local/bin/rbenv init -)"
 
-# Java
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
 # Useful aliases
 alias g="git"
 alias b="bundle"
