@@ -42,6 +42,14 @@ export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 # Ruby
 eval "$(/usr/local/bin/rbenv init -)"
 
+# Python
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Node
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
 # Useful aliases
 alias g="git"
 alias b="bundle"
@@ -53,7 +61,8 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export RUBYOPT='-W:no-deprecated'
 
 # Homebrew: dependencies take precedence
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Homebrew: sbin is available in path
 export PATH="/usr/local/sbin:$PATH"
