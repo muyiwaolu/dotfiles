@@ -1,17 +1,24 @@
 # Unix
 export EDITOR="$(which vim)"
-export VISUAL=$EDITOR
-export GIT_EDITOR=$EDITOR
+export GIT_EDITOR="$EDITOR"
+export VISUAL=$"$(which mvim)"
 
+# Config
+export DEV_DIR="$HOME/Dev"
+export DOTFILES_DIR="$DEV_DIR/dotfiles"
+
+alias df="cd $DOTFILES_DIR"
+ 
 # Left prompt
 PROMPT='%~ (%?) (%T) > '
 
 # Support history
-touch ~/.zsh_history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
 
 # Right prompt
 # https://stackoverflow.com/a/1128583/4165455
@@ -42,14 +49,35 @@ export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 # Ruby
 eval "$(/usr/local/bin/rbenv init -)"
 
-# Python
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # Node
+export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+# Python
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 # Useful aliases
 alias g="git"
 alias b="bundle"
@@ -58,13 +86,19 @@ alias b="bundle"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 # Silence noisy deprecation warnings
+#
+# This can cause the error message invalid option 
+# -: (-h will show valid options) (RuntimeError) 
+# on versions of Ruby < 2.7
+#
+# More info: https://bloggie.io/@kinopyo/ruby-invalid-option-h-will-show-valid-options-runtimeerror
 export RUBYOPT='-W:no-deprecated'
 
 # Homebrew: dependencies take precedence
 # export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Homebrew: sbin is available in path
+# homebrew binaries are available in path
 export PATH="/usr/local/sbin:$PATH"
 
 # Autocompletion
