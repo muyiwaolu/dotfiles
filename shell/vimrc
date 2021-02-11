@@ -58,7 +58,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'janko/vim-test'
 
   " Colours
-  Plug 'ayu-theme/ayu-vim'
+  Plug 'joshdick/onedark.vim'
 
   " Ruby
   Plug 'vim-ruby/vim-ruby'
@@ -73,24 +73,17 @@ call plug#begin('~/.vim/plugged')
   Plug 'slim-template/vim-slim'
   Plug 'hashivim/vim-terraform'
   Plug 'tpope/vim-repeat'
-
-  " Clojure
-  Plug 'guns/vim-clojure-static'
-  Plug 'guns/vim-sexp'
-  Plug 'tpope/vim-salve'
-  Plug 'tpope/vim-sexp-mappings-for-regular-people'
-  Plug 'tpope/vim-fireplace'
-  Plug 'venantius/vim-cljfmt'
-  Plug 'luochen1990/rainbow'
-  Plug 'bhurlow/vim-parinfer'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'Quramy/tsuquyomi'
+  Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
-" Colorscheme & configuration
-set termguicolors     " enable true colors support
-let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+" Colorscheme 
+set termguicolors
+syntax on
+colorscheme onedark
 
 " ALE global configuration
 let g:ale_fix_on_save = 1
@@ -110,15 +103,6 @@ nnoremap <silent> <Leader>tv :TestVisit<CR>
 " NERDTree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>nf :NERDTreeFind<CR>
-
-" Vim Fireplace
-nnoremap <Leader>ef :%Eval<CR>
-nnoremap <Leader>el :'<,'>Eval<CR>
-nnoremap <Leader>rt :RunTests<CR>
-
-" Vim Cljfmt
-let g:clj_fmt_autosave = 0
-nnoremap <Leader>cf :Cljfmt<CR>
 
 " Navigate the quickfix list
 nnoremap <Leader>qn :cn<CR>
@@ -140,20 +124,22 @@ endif
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-" Ranibow parenthesis
-let g:rainbow_active = 1
-let g:rainbow_conf = {
-      \  'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-      \  'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-      \  'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-      \  'separately': {
-      \      '*': 0,
-      \      'clojure': {},
-      \  }
-      \}
-
 " Define Ag function
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 " Bind backslash (\) to Ag function defined above
 nnoremap \ :Ag<SPACE>
+
+" Local config
+nnoremap <Leader>z0 :e ~/.vimrc<CR>
+nnoremap <Leader>z1 :e ~/.vimrc.local<CR>
+nnoremap <Leader>z2 :e ~/.zshrc<CR>
+nnoremap <Leader>z3 :e ~/.zshrc.local<CR>
+nnoremap <Leader>s0 :source ~/.vimrc<CR>
+nnoremap <Leader>s1 :source ~/.gvimrc<CR>
+
+nnoremap <silent> <Leader>zf :cd ~/Dev/dotfiles <bar> :e install.conf.yaml<CR>
+
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
