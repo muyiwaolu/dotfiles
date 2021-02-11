@@ -105,6 +105,8 @@ htmlcov/
 .coverage
 .coverage.*
 .cache
+.nyc_output/
+coverage/
 nosetests.xml
 coverage.xml
 *.cover
