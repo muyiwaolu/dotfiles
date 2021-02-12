@@ -52,7 +52,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'christoomey/vim-conflicted'
-  Plug 'mhinz/vim-signify'
+  Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-projectionist'
   Plug 'tpope/vim-dispatch'
   Plug 'janko/vim-test'
@@ -76,13 +76,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'leafgarland/typescript-vim'
   Plug 'Quramy/tsuquyomi'
-  Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
 " Colorscheme 
-set termguicolors
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 syntax on
 colorscheme onedark
 
