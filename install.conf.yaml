@@ -7,11 +7,18 @@
     ~/.vimrc:
         path: shell/vimrc
         create: true
+    ~/.vim/ftplugin:
+        path: shell/vim/ftplugin
+        create: true
+        force: true
     ~/.gitignore:
         path: shell/gitignore
         create: true
     ~/.zshrc:
         path: shell/zshrc
+        create: true
+    ~/.zprofile:
+        path: shell/zprofile
         create: true
     ~/.tmux.conf:
         path: shell/tmux.conf
