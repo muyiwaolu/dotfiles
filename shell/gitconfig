@@ -8,6 +8,7 @@
 	default = current
 [alias]
 	lg = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ack = ! git ls-files --others --cached --exclude-standard | ack -x
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
