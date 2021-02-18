@@ -1,0 +1,14 @@
+" Disable visual bell
+autocmd! GUIEnter * set vb t_vb=
+
+"Fonts
+if has("gui_running")
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+    set guifontwide=Source\ Code\ Pro\ for\ Powerline:h14
+    set linespace=2
+endif
+
+
+" Send tests to iTerm when using MacVim
+let test#strategy = "iterm"
+

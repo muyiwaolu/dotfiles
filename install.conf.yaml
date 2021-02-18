@@ -1,11 +1,17 @@
 - clean: ['~']
 
 - link:
+    ~/.config/nvim/init.vim:
+        path: shell/config/nvim/init.vim
+        create: true
     ~/.gitconfig:
         path: shell/gitconfig
         create: true
     ~/.vimrc:
         path: shell/vimrc
+        create: true
+    ~/.gvimrc:
+        path: shell/gvimrc
         create: true
     ~/.vim/ftplugin:
         path: shell/vim/ftplugin
