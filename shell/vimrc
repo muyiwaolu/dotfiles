@@ -117,7 +117,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Bind backslash (\) to Ack
-nnoremap \ :Ack<SPACE>
+nnoremap \ :Ack!<SPACE>
 
 " Local config
 nnoremap <Leader>z0 :e ~/Dev/dotfiles/shell/vimrc<CR>
