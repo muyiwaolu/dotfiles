@@ -1,22 +1,16 @@
 # Unix
-export EDITOR="$(which vim)"
+export EDITOR="$(which nvim)"
 export GIT_EDITOR="$EDITOR"
-export VISUAL=$"$(which mvim)"
+export VISUAL="$(which vimr)"
 
 # Config
 export DEV_DIR="$HOME/Dev"
 export DOTFILES_DIR="$DEV_DIR/dotfiles"
 
+alias dev="cd $DEV_DIR"
+
 # Left prompt
 PROMPT='%~ (%?) (%T) > '
-
-# Support history
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
-setopt sharehistory
-setopt incappendhistory
 
 # Right prompt
 # https://stackoverflow.com/a/1128583/4165455
@@ -29,6 +23,15 @@ zstyle ':vcs_info:*' formats       \
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 
 zstyle ':vcs_info:*' enable git cvs svn
+
+# Support history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+
 
 # or use pre_cmd, see man zshcontrib
 vcs_info_wrapper() {
