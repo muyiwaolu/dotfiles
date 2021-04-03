@@ -1,7 +1,7 @@
 # Unix
 export EDITOR="$(which nvim)"
 export GIT_EDITOR="$EDITOR"
-export VISUAL="$(which vimr)"
+export VISUAL=$EDITOR
 
 # Config
 export DEV_DIR="$HOME/Dev"
@@ -51,17 +51,19 @@ export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 eval "$(/usr/local/bin/rbenv init -)"
 # Link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded)
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-# Silence noisy deprecation warnings
-#
-# This can cause the error message invalid option 
-# -: (-h will show valid options) (RuntimeError) 
-# on versions of Ruby < 2.7
-#
-# More info: https://bloggie.io/@kinopyo/ruby-invalid-option-h-will-show-valid-options-runtimeerror
-export RUBYOPT='-W:no-deprecated'
 
 # Node completions
-# NVM is setup in the ~/.zprofile
+# Homebrew: dependencies take precedence
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# homebrew binaries are available in path
+export PATH="/usr/local/sbin:$PATH"
+
+# Load nvm's nodejs
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+# export PATH="/Users/muyiwa/.nvm/versions/node/v15.8.0/bin:$PATH"
+
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
 # Python
