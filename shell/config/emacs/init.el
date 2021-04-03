@@ -29,6 +29,46 @@
 ;; Nov
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 
+;; Typescript
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  ;; company is an optional dependency. You have to
+  ;; install it separately via package-install
+  ;; `M-x package-install [ret] company`
+  (company-mode +1))
+
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+
+;; formats the buffer before saving
+(add-hook 'before-save-hook 'tide-format-before-save)
+
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+;; web mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (string-equal "tsx" (file-name-extension buffer-file-name))
+              (setup-tide-mode))))
+
+(add-hook 'web-mode-hook #'(lambda ()
+                            (enable-minor-mode
+                             '("\\.(jsx|tsx)?\\'" . prettier-js-mode))))
+
+;; multiple cursors
+(require 'multiple-cursors)
+
+;; right alt is not meta
+(setq ns-right-alternate-modifier (quote none))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -45,7 +85,7 @@
    '("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "node_modules"))
  '(indent-tabs-mode nil)
  '(package-selected-packages
-   '(magit nov dumb-jump projectile shell-command+ helm atom-one-dark-theme)))
+   '(multiple-cursors rjsx-mode prettier web-mode company tide magit nov dumb-jump projectile shell-command+ helm atom-one-dark-theme)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
