@@ -4,9 +4,6 @@
     ~/.config/nvim/init.vim:
         path: shell/config/nvim/init.vim
         create: true
-    ~/.config/emacs/init.el:
-        path: shell/config/emacs/init.el
-        create: true
     ~/.gitconfig:
         path: shell/gitconfig
         create: true
