@@ -1,6 +1,6 @@
 # Unix
-export EDITOR="$(which nvim)"
-export GIT_EDITOR="$EDITOR"
+export EDITOR="$(which code)"
+export GIT_EDITOR="$EDITOR --wait"
 export VISUAL=$EDITOR
 
 # Config
