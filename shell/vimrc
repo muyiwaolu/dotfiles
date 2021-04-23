@@ -59,9 +59,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'janko/vim-test'
   Plug 'sheerun/vim-polyglot'
 
-  " Colours
-  Plug 'joshdick/onedark.vim'
-
   " Ruby
   Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'
@@ -85,7 +82,6 @@ if (has("termguicolors"))
 endif
 
 syntax on
-colorscheme onedark
 
 " ALE global configuration
 let g:ale_fix_on_save = 1
